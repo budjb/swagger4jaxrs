@@ -6,3 +6,7 @@
 /*.iml
 atlassian-ide-plugin.xml
 web-app/WEB-INF
+/bin/
+.project
+.classpath
+.settings/
