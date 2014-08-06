@@ -3,25 +3,9 @@
 <head>
   <title>Swagger UI</title>
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
-  <link href='${resource(dir: 'vendor/swagger-ui/2.0.14/css', file: 'highlight.default.css')}' media='screen' rel='stylesheet' type='text/css'/>
-  <link href='${resource(dir: 'vendor/swagger-ui/2.0.14/css', file: 'screen.css')}' media='screen' rel='stylesheet' type='text/css'/>
 
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'shred.bundle.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'jquery-1.8.0.min.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'jquery.slideto.min.js')}" ></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'jquery.wiggle.min.js')}" ></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'jquery.ba-bbq.min.js')}" ></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'handlebars-1.0.0.js')}" ></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'underscore-min.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'backbone-min.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'swagger.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14', file: 'swagger-ui.js')}"></script>
-  <script src="${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'highlight.7.3.pack.js')}" ></script>
-
-  %{--<!-- enabling this will enable oauth2 implicit scope support -->--}%
-  %{--<script src=""${resource(dir: 'vendor/swagger-ui/2.0.14/lib', file: 'swagger-oauth.js')}""></script>--}%
-
-  <script >
+  <r:require module="swagger"/>
+  <r:script >
     $(function () {
       window.swaggerUi = new SwaggerUi({
         url: "${apiDocsPath}",
@@ -59,7 +43,9 @@
       })
       window.swaggerUi.load();
     });
-  </script>
+  </r:script>
+  <r:layoutResources/>
+  <r:layoutResources/>
 </head>
 
 <body>
