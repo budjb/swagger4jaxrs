@@ -5,7 +5,7 @@ import org.codehaus.groovy.grails.commons.GrailsApplication
 import com.wordnik.swagger.jaxrs.config.BeanConfig
 
 class Swagger4jaxrsGrailsPlugin {
-    def version = "0.2"
+    def version = "0.2.1"
     def group = 'com.rackspace.rvi'
     def grailsVersion = "2.0 > *"
     def pluginExcludes = [
